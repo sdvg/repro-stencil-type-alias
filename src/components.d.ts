@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { ShowPropType } from "./components/my-component/types";
+export { ShowPropType } from "./components/my-component/types";
 export namespace Components {
     interface MyComponent {
         /**
@@ -19,6 +21,7 @@ export namespace Components {
           * The middle name
          */
         "middle": string;
+        "show": ShowPropType;
     }
 }
 declare global {
@@ -46,6 +49,7 @@ declare namespace LocalJSX {
           * The middle name
          */
         "middle"?: string;
+        "show"?: ShowPropType;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
